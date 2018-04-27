@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final Exam</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel = "stylesheet"
+    href = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("body").css({"background-color": "#00FFFF", "font-family": "comic sans ms"}).addClass("animated fadeIn");
+      $("table").css({"font-size": "20px", "text-align": "center", "margin-left": "5%"});
+      $("h1").css("text-align", "center").addClass("animated flip");
+      $("td").addClass("animated rotateIn");
+      $("#btnSelect").addClass("animated rollIn");
+      var img = $('<img id="dynamic">');
+      img.attr('src', 'frenchFlag.jpg');
+      img.appendTo('#frenchFlag');
+    });
+    </script>
+    <script>
+      function gradeTest() {
+        var totalQuestions = 5;
+        var correctAnswers = 0;
+        var alertText;
+        var i;
+
+        //First Question
+        var a1 = document.getElementsByName('q1');
+        for(i = 0; i < a1.length; i++) {
+          if(a1[i].checked) {
+            if(a1[i].value == 'bonjour') {
+              correctAnswers++;
+              break;
+            }
+          }
+        }
+
+        //Second Question
+        var a2 = document.getElementsByName('q2');
+        for(i = 0; i < a2.length; i++) {
+          if(a2[i].checked) {
+            if(a2[i].value == 'oui') {
+              correctAnswers++;
+              break;
+            }
+          }
+        }
+      //Third question
+      var a3 = document.getElementsByName('q3');
+      for(i = 0; i < a3.length; i++) {
+        if(a3[i].checked) {
+          if(a3[i].value == 'merci') {
+            correctAnswers++;
+            break;
+          }
+        }
+      }
+
+      //Fourth question
+      var a4 = document.getElementsByName('q4');
+      for(i = 0; i < a4.length; i++) {
+        if(a4[i].checked) {
+          if(a4[i].value == 'bonsoir') {
+            correctAnswers++;
+            break;
+          }
+        }
+      }
+
+      //Fifth question
+      var a5 = document.getElementsByName('q5');
+      for(i = 0; i < a5.length; i++) {
+        if(a5[i].checked) {
+          if(a5[i].value == 'monsieur') {
+            correctAnswers++;
+            break;
+          }
+        }
+      }
+      /*
+      var a1 = document.getElementById('q1').value.toLowerCase();
+      if(a1 == 'george washington') {
+      correctAnswers++;
+    }
+
+    //Second Question
+    var a2 = document.getElementsByName('q2');
+    for(i = 0; i < a2.length; i++) {
+    if(a2[i].checked) {
+    if(a2[i].value == 'true') {
+    correctAnswers++;
+  }
+}
+}
+
+      //Fourth question
+      var a4 = document.getElementsByName('q4');
+      var a4answers = new Array();
+      var a4right = new Array('chicken', 'horse');
+      var a4bool = true;
+
+      for(i = 0; i < a4.length; i++) {
+        if(a4[i].checked) {
+          a4answers.push(a4[i].value);
+        }
+      }
+
+      a4answers.sort();
+      a4right.sort();
+
+      if(a4answers.length == a4right.length) {
+        for(i = 0; i < a4answers.length == a4right.length; i++) {
+          if(a4answers[i] != a4right[i]) {
+            a4bool = false;
+            break;
+          }
+        }
+      }
+      else {
+        a4bool = false;
+      }
+      if(a4bool == true) {
+        correctAnswers++;
+      }
+
+      //Fifth question
+      var q5 = document.getElementById('q5');
+      if(q5.selectedIndex == 3) {
+        correctAnswers++;
+      }
+*/
+      if(correctAnswers == totalQuestions) {
+        alertText = "All answers are correct.";
+      }
+      else {
+        alertText = "You got " + correctAnswers + " out of " + totalQuestions + " correct!";
+      }
+      alert(alertText);
+    }
+
+  </script>
+<!-- GOT FANCY AND DID CSS WITH JQUERY -->
+</head>
+  <body>
+
+    <h1>Super Duper Learn A Language: French</h1>
+
+    <form id="test">
+      <table border="1" cellpadding="5" cellspacing="0">
+
+        <!-- QUESTION 1 -->
+        <tr>
+          <td>How do you say "hello" in French?</td>
+          <td><input name="q1" type="radio" value="hola" />
+            Hola  |
+            <input name="q1" type="radio" value="bonjour" />
+            Bonjour  |
+            <input name="q1" type="radio" value="hallo" />
+            Hallo  |
+            <input name="q1" type="radio" value="kon'nichiwa" />
+            Kon'nichiwa  |
+            <input name="q1" type="radio" value="none" />
+            None of these </td>
+        </tr>
+
+        <!-- QUESTION 2 -->
+        <tr>
+          <td>How do you say "yes" in French?</td>
+          <td><input name="q2" type="radio" value="ja" />
+            Ja  |
+            <input name="q2" type="radio" value="si" />
+            Si  |
+            <input name="q2" type="radio" value="oui" />
+            Oui  |
+            <input name="q2" type="radio" value="hai" />
+            Hai  |
+            <input name="q2" type="radio" value="none" />
+            None of these </td>
+        </tr>
+
+        <!-- QUESTION 3 -->
+        <tr>
+          <td>How do you say "thank you" in French?</td>
+          <td><input name="q3" type="radio" value="arigatōgozaimashita" />
+            Arigatōgozaimashita  |
+            <input name="q3" type="radio" value="danke" />
+            Danke  |
+            <input name="q3" type="radio" value="gracias" />
+            Gracias  |
+            <input name="q3" type="radio" value="merci" />
+            Merci  |
+            <input name="q3" type="radio" value="none" />
+            None of these </td>
+        </tr>
+
+        <!-- QUESTION 4 -->
+        <tr>
+          <td>How do you say "good night" in French?</td>
+          <td><input name="q4" type="radio" value="guten abend" />
+            Guten Abend  |
+            <input name="q4" type="radio" value="oyasumi" />
+            Oyasumi  |
+            <input name="q4" type="radio" value="bonsoir" />
+            Bonsoir  |
+            <input name="q4" type="radio" value="buenas noches" />
+            Buenas Noches  |
+            <input name="q4" type="radio" value="none" />
+            None of these </td>
+        </tr>
+
+        <!-- QUESTION 5 -->
+        <tr>
+          <td>How do you say "sir" in French?</td>
+          <td><input name="q5" type="radio" value="monsieur" />
+            Monsieur  |
+            <input name="q5" type="radio" value="señor" />
+            Señor  |
+            <input name="q5" type="radio" value="sā" />
+            Sā  |
+            <input name="q5" type="radio" value="herr" />
+            Herr  |
+            <input name="q5" type="radio" value="none" />
+            None of these </td>
+        </tr>
+<!--
+         QUESTION 1
+        <tr>
+          <td>Who was the first president of the United States? </td>
+          <td><input name="q1" type="text" id="q1" size="30" max="30" /></td>
+        </tr>
+
+         QUESTION 2
+        <tr>
+          <td>Was George Washington the first president of the United States?</td>
+          <td><input name="q2" type="radio" value="true" />
+            True  |
+            <input name="q2" type="radio" value="false" />
+            False</td>
+          </tr>
+         QUESTION 4
+        <tr>
+          <td width="30%">Which of the following animals are typically found on a farm? [Check all that apply] </td>
+          <td>
+            <input name="q4" type="checkbox" id="q4" value="chicken" />
+            Chicken  |
+            <input name="q4" type="checkbox" id="q4" value="swamp thing" />
+            Swamp Thing  |
+            <input name="q4" type="checkbox" id="q4" value="horse" />
+            Horse  |
+            <input name="q4" type="checkbox" id="q4" value="Squid Monster" />
+            Squid Monster
+          </td>
+        </tr>
+
+         QUESTION 5
+        <tr>
+          <td>The City of Richmond is the capital of what state?</td>
+          <td>
+            <select name="q5" id="q5">
+              <option value="alabama">Alabama</option>
+              <option value="new york">New York</option>
+              <option value="alaska">Alaska</option>
+              <option value="virginia">Virginia</option>
+              <option value="maryland">Mary Land</option>
+            </select>
+          </td>
+        </tr> -->
+      </table>
+      <br />
+
+      <div id="btnSelect">
+      <input name="submit" type="button" onClick="gradeTest()" value="SUBMIT AND GRADE" />
+    </div>
+
+<div id="frenchFlag"></div>
+
+    </form>
+  </body>
+</html>
